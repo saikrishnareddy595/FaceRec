@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+   {% block content %}
+      <table border = 1>
+         {% for key, value in result.items() %}
+            <tr>
+               <th align="center"> {{ key }} </th>
+               <td align="center"> {{ value }} </td>
+            </tr>
+         {% endfor %}
+      </table>
+   {% endblock %}

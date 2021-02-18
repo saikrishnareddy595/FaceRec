@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<div class="card" style="width: auto">
+      <div class="card-body" align="center">
+    <h5 class="card-title">Upload an Image</h5>
+          <form id="uploadbanner" enctype="multipart/form-data" method="post" action="/learning">
+              <input type="file" name="testimage" id="image">
+              <br>
+              <br>
+              <input class="btn btn-primary" type="submit" value="submit" id="submit"/>
+            </form>
+      </div>
+</div>
+<br>
+<div align="center">
+<div class="card" style="width: 18rem;" >
+  <div class="card-header">
+    <strong><h4>Available Employees</h4></strong>
+  </div>
+  <ul class="list-group list-group-flush">
+      {% for key, value in result.items() %}
+    <li class="list-group-item">{{ value }}</li>
+      {% endfor %}
+  </ul>
+</div>
+</div>
+{% endblock %}
